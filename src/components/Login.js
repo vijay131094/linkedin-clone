@@ -1,14 +1,14 @@
 import styled from "styled-components"
 import { connect } from "react-redux"
 import { signInAPI } from '../actions'
-import { Redirect } from 'react-router'
+import { Navigate } from 'react-router'
 
 const Login =(props)=>{
   return(
       <Container>
           {
                 props.user && 
-                <Redirect to = '/home' />
+                <Navigate to = '/home' />
             }
           <Nav>
               <a href="/">
@@ -170,7 +170,7 @@ const Google = styled.button`
 `;
 const mapStateToProps = (state) => {
     return {
-        //user: state.userState.user,
+        user: state.userState.user,
     };
 };
 
