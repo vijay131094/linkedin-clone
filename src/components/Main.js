@@ -55,7 +55,7 @@ const Main = (props) => {
             </SharedImage>
             <SocialCounts>
                 <button>
-                      <img src="images/like-icon.png" alt="" />
+                    <img src="images/like-icon.png" alt="000" />
                     <img src="images/clap-icon.png" alt="" />
                     <span>62</span>
                 </button>
