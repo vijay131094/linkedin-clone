@@ -32,10 +32,7 @@ const Main = (props) => {
     }
 
     return (
-        <>
-        { props.articles.length === 0 ?
-            <p>No articles to show.</p>
-            :
+
             <Container>
                 <ShareBox>
                     <div>
@@ -74,10 +71,13 @@ const Main = (props) => {
                         </button>
                     </div>
                 </ShareBox>
-
+                <>
+        { props.articles.length === 0 ?(
+            <p>No articles to show.</p>
+        ):(
                 <Content>
                     {
-                        props.loading && <img src="./images/spin-loading.gif" />
+                        props.loading && <img src="./images/spin-loading.gif" alt=""/>
                     }
                     {
                         props.articles.length != 0 &&
@@ -150,11 +150,12 @@ const Main = (props) => {
                         ))        
             }
                 </Content>
+         )} </>
 
                 <PostModal showModal={showModal} handleClick = {handleClick} />
             </Container>
-        }
-        </>
+        
+        
     );
 };
 
